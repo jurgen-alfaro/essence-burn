@@ -109,7 +109,7 @@ export default function PhotoCarousel({
                 className="relative min-w-0 flex-[0_0_100%]"
                 style={{ flex: '0 0 100%' }}
               >
-                <div className="relative aspect-[16/9] w-full sm:aspect-[21/9]">
+                <div className="relative aspect-[8/9] w-full sm:aspect-[15/9] lg:aspect-[21/9]">
                   <Image
                     src={slide.image}
                     alt={`Slide ${index + 1}`}
@@ -133,7 +133,7 @@ export default function PhotoCarousel({
                         )}
 
                         {slide.title && (
-                          <h2 className="font-fredoka text-3xl leading-tight font-light tracking-wide text-white sm:text-4xl md:text-5xl lg:text-6xl">
+                          <h2 className="font-fredoka mx-auto max-w-xs text-center text-3xl leading-tight font-light tracking-wide text-balance text-white sm:max-w-none sm:text-4xl md:text-5xl lg:text-6xl">
                             {slide.title}
                           </h2>
                         )}
@@ -160,7 +160,7 @@ export default function PhotoCarousel({
         {/* Navigation Buttons */}
         <button
           onClick={scrollPrev}
-          className="absolute top-1/2 left-4 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-gray-800 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white focus:ring-2 focus:ring-[#e3b2a1] focus:ring-offset-2 focus:outline-none sm:h-12 sm:w-12"
+          className="absolute top-1/2 left-4 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-gray-800 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white focus:ring-2 focus:ring-[#e3b2a1] focus:ring-offset-2 focus:outline-none sm:h-12 sm:w-12"
           aria-label="Imagen anterior"
           type="button"
         >
