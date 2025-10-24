@@ -402,12 +402,25 @@ const ShippingPage: React.FC = () => {
               Cambios y Devoluciones
             </h2>
             <p className="text-essence-mauve-500 font-quicksand text-lg font-light italic">
-              Si algo no vibra con vos, estamos acá para ayudarte.
+              Si algo no vibra contigo, estamos acá para ayudarte.
+            </p>
+          </div>
+          <div className="from-essence-peach-200 to-essence-cream-500 border-essence-rose-200/30 mx-auto mt-16 max-w-xl rounded-3xl border bg-gradient-to-br p-8 sm:p-12">
+            <p className="text-essence-mauve-500 font-quicksand text-center text-base">
+              Para conocer todos los detalles sobre nuestras políticas de devolución y garantía,
+              visita nuestra{' '}
+              <Link
+                href="/devoluciones"
+                className="text-essence-mauve-700 hover:text-essence-mauve-900 underline transition-colors"
+              >
+                página de devoluciones
+              </Link>
+              .
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            {/* Policy Card 1 */}
+          {/* <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            
             <div className="from-essence-rose-50 to-essence-cream-50 border-essence-rose-100 rounded-3xl border bg-gradient-to-br p-8">
               <h3 className="text-essence-mauve-700 font-fredoka mb-4 text-xl font-light tracking-wide">
                 Política de Devolución
@@ -428,7 +441,7 @@ const ShippingPage: React.FC = () => {
               </ul>
             </div>
 
-            {/* Policy Card 2 */}
+         
             <div className="from-essence-peach-50 to-essence-rose-50 border-essence-peach-100 rounded-3xl border bg-gradient-to-br p-8">
               <h3 className="text-essence-mauve-700 font-fredoka mb-4 text-xl font-light tracking-wide">
                 Cambios y Garantía
@@ -448,8 +461,7 @@ const ShippingPage: React.FC = () => {
                 ))}
               </ul>
             </div>
-          </div>
-
+          </div> 
           <div className="bg-essence-cream-50 border-essence-rose-100 mt-8 rounded-2xl border p-6">
             <p className="text-essence-mauve-600 font-quicksand text-center leading-relaxed font-light">
               <strong className="text-essence-mauve-700 font-bold">Nota importante:</strong> Por
@@ -457,6 +469,7 @@ const ShippingPage: React.FC = () => {
               abiertos o usados.
             </p>
           </div>
+          */}
         </div>
       </section>
 
