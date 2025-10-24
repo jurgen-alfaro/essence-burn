@@ -1,26 +1,261 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Fonts */
+@theme {
+  --font-fredoka: "Fredoka", sans-serif; 
+  --font-quicksand: "Quicksand", sans-serif; 
+  --font-parisienne: "Parisienne", sans-serif; 
+  --font-poiretone: "PoiretOne", sans-serif; 
+  --font-petit: "PetitFormalScript", sans-serif; 
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Custom text sizes */
+
+@theme {
+  --text-tiny: 0.85rem;
+  --text-xxs: 0.64rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  /* ========================================
+     ESSENCE BURN - COLOR PALETTE
+     ======================================== */
+
+  /* --- Colores Principales de Marca --- */
+  --color-essence-rose: #e0bdb8;        /* Principal - Rosa suave cálido */
+  --color-essence-mauve: #b68187;       /* Secundario - Malva profundo */
+  --color-essence-cream: #f7eeed;       /* Fondo claro - Crema delicado */
+  --color-essence-peach: #e3b2a1;       /* Acento - Durazno elegante */
+
+  /* --- Variaciones de Rosa (Rose) --- */
+  --color-essence-rose-50: #faf7f6;     /* Muy claro - Fondos sutiles */
+  --color-essence-rose-100: #f5efed;    /* Claro - Hover states */
+  --color-essence-rose-200: #ecddd9;    /* Suave */
+  --color-essence-rose-300: #e0bdb8;    /* Base (principal) */
+  --color-essence-rose-400: #d4a39d;    /* Medio */
+  --color-essence-rose-500: #c88982;    /* Medio oscuro */
+  --color-essence-rose-600: #b06d66;    /* Oscuro */
+  --color-essence-rose-700: #8f5651;    /* Muy oscuro */
+  --color-essence-rose-800: #6e423e;    /* Profundo */
+  --color-essence-rose-900: #4d2e2b;    /* Casi negro */
+
+  /* --- Variaciones de Malva (Mauve) --- */
+  --color-essence-mauve-50: #f8f5f6;    /* Muy claro */
+  --color-essence-mauve-100: #f0e9ea;   /* Claro */
+  --color-essence-mauve-200: #dcc8cb;   /* Suave */
+  --color-essence-mauve-300: #c9a7ac;   /* Claro medio */
+  --color-essence-mauve-400: #b68187;   /* Base (secundario) */
+  --color-essence-mauve-500: #a36d73;   /* Medio */
+  --color-essence-mauve-600: #8a5a5f;   /* Medio oscuro */
+  --color-essence-mauve-700: #6f484c;   /* Oscuro */
+  --color-essence-mauve-800: #543739;   /* Muy oscuro */
+  --color-essence-mauve-900: #392526;   /* Profundo */
+
+  /* --- Variaciones de Crema (Cream) --- */
+  --color-essence-cream-50: #ffffff;    /* Blanco puro */
+  --color-essence-cream-100: #fcfbfb;   /* Casi blanco */
+  --color-essence-cream-200: #f7eeed;   /* Base (fondo claro) */
+  --color-essence-cream-300: #f2e1df;   /* Suave */
+  --color-essence-cream-400: #edd4d1;   /* Medio */
+  --color-essence-cream-500: #e8c7c3;   /* Medio oscuro */
+  --color-essence-cream-600: #d9afa9;   /* Oscuro */
+  --color-essence-cream-700: #c99790;   /* Muy oscuro */
+
+  /* --- Variaciones de Durazno (Peach) --- */
+  --color-essence-peach-50: #faf6f4;    /* Muy claro */
+  --color-essence-peach-100: #f5ede9;   /* Claro */
+  --color-essence-peach-200: #ebdad2;   /* Suave */
+  --color-essence-peach-300: #e3b2a1;   /* Base (acento) */
+  --color-essence-peach-400: #db9b86;   /* Medio */
+  --color-essence-peach-500: #d3846b;   /* Medio oscuro */
+  --color-essence-peach-600: #ba6d56;   /* Oscuro */
+  --color-essence-peach-700: #965646;   /* Muy oscuro */
+  --color-essence-peach-800: #724136;   /* Profundo */
+  --color-essence-peach-900: #4e2c26;   /* Casi negro */
+
+  /* --- Colores Neutros Complementarios --- */
+  --color-essence-sand-50: #faf9f8;     /* Arena muy clara */
+  --color-essence-sand-100: #f5f3f1;    /* Arena clara */
+  --color-essence-sand-200: #ebe7e4;    /* Arena suave */
+  --color-essence-sand-300: #dcd6d1;    /* Arena media */
+  --color-essence-sand-400: #cdc5be;    /* Arena */
+  --color-essence-sand-500: #beb3ab;    /* Arena oscura */
+  --color-essence-sand-600: #9d9287;    /* Arena profunda */
+  --color-essence-sand-700: #7c7169;    /* Taupe */
+  --color-essence-sand-800: #5b514b;    /* Taupe oscuro */
+  --color-essence-sand-900: #3a322d;    /* Marrón profundo */
+
+  /* --- Colores de Acento Adicionales --- */
+  --color-essence-terracotta: #c97a5f;  /* Terracota cálida */
+  --color-essence-clay: #a8705c;        /* Arcilla */
+  --color-essence-blush: #f4d4cd;       /* Rubor suave */
+  --color-essence-nude: #e8d0c8;        /* Nude elegante */
+  --color-essence-latte: #d4bfb7;       /* Latte cremoso */
+  --color-essence-mocha: #9e8078;       /* Mocha suave */
+  --color-essence-warmgray: #8b7d77;    /* Gris cálido */
+  --color-essence-tokibrown: #b78c83;   /* Color caqui */
+  --color-essence-blushingcoconut: #e9d3cc;   /* Color caqui mas claro */
+
+  /* --- Colores Funcionales (Estados UI) --- */
+  --color-essence-success: #9fb896;     /* Verde suave sage */
+  --color-essence-warning: #e8c18e;     /* Ámbar cálido */
+  --color-essence-error: #d18787;       /* Rojo suave */
+  --color-essence-info: #a8b8c9;        /* Azul grisáceo suave */
+
+  /* --- Sombras y Overlay --- */
+  --color-essence-shadow-light: rgba(182, 129, 135, 0.08);
+  --color-essence-shadow-medium: rgba(182, 129, 135, 0.15);
+  --color-essence-shadow-dark: rgba(182, 129, 135, 0.25);
+  --color-essence-overlay: rgba(227, 178, 161, 0.12);
+
+  /* ========================================
+     APLICACIÓN DE COLORES EN TAILWIND
+     ======================================== */
+
+  /* Configuración para usar como: bg-primary, text-secondary, etc. */
+  --color-primary: var(--color-escence-rose);
+  --color-secondary: var(--color-escence-mauve);
+  --color-accent: var(--color-escence-peach);
+  --color-background: var(--color-escence-cream);
+  --color-surface: #ffffff;
+  
+  /* Text colors */
+  --color-text-primary: var(--color-escence-mauve-700);
+  --color-text-secondary: var(--color-escence-mauve-500);
+  --color-text-tertiary: var(--color-escence-mauve-400);
+  --color-text-muted: var(--color-escence-sand-500);
+
+  /* Border colors */
+  --color-border-light: var(--color-escence-cream-300);
+  --color-border-medium: var(--color-escence-rose-200);
+  --color-border-dark: var(--color-escence-mauve-300);
+}
+
+/* ========================================
+   ESTILOS GLOBALES BASE
+   ======================================== */
+
+@layer base {
+  * {
+    @apply border-border-light;
+  }
+
+  body {
+    @apply bg-background text-text-primary;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Selection color */
+  ::selection {
+    background-color: var(--color-essence-peach-200);
+    color: var(--color-essence-mauve-700);
+  }
+
+  /* Focus outline personalizado */
+  :focus-visible {
+    outline: 2px solid var(--color-essence-peach);
+    outline-offset: 2px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ========================================
+   UTILIDADES PERSONALIZADAS
+   ======================================== */
+
+@layer utilities {
+  /* Gradientes de marca */
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, var(--color-escence-rose) 0%, var(--color-escence-peach) 100%);
+  }
+
+  .bg-gradient-secondary {
+    background: linear-gradient(135deg, var(--color-escence-mauve) 0%, var(--color-escence-rose) 100%);
+  }
+
+  .bg-gradient-soft {
+    background: linear-gradient(180deg, var(--color-escence-cream) 0%, var(--color-escence-rose-50) 100%);
+  }
+
+  .bg-gradient-warm {
+    background: linear-gradient(135deg, var(--color-escence-cream) 0%, var(--color-escence-peach-50) 50%, var(--color-escence-rose-50) 100%);
+  }
+
+  /* Text gradients */
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, var(--color-escence-mauve) 0%, var(--color-escence-peach) 100%);
+  }
+
+  /* Sombras personalizadas */
+  .shadow-soft {
+    box-shadow: 0 2px 8px var(--color-escence-shadow-light);
+  }
+
+  .shadow-medium {
+    box-shadow: 0 4px 16px var(--color-escence-shadow-medium);
+  }
+
+  .shadow-elevated {
+    box-shadow: 0 8px 32px var(--color-escence-shadow-dark);
+  }
+
+  /* Glassmorphism */
+  .glass-effect {
+    background: rgba(247, 238, 237, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .glass-effect-dark {
+    background: rgba(182, 129, 135, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+/* ========================================
+   ANIMACIONES
+   ======================================== */
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite linear;
+    background: linear-gradient(
+      to right,
+      var(--color-escence-cream-200) 0%,
+      var(--color-escence-cream-300) 20%,
+      var(--color-escence-cream-200) 40%,
+      var(--color-escence-cream-200) 100%
+    );
+    background-size: 1000px 100%;
+  }
 }
