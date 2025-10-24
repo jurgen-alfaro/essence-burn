@@ -2,7 +2,17 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Mail, Send, MapPin, Phone, Clock, Instagram, Facebook } from 'lucide-react';
+import {
+  Mail,
+  Send,
+  MapPin,
+  Phone,
+  Clock,
+  Instagram,
+  Facebook,
+  CheckCircle,
+  X,
+} from 'lucide-react';
 import Link from 'next/link';
 import DailyQuote from '../ui/DailyQuote';
 
@@ -14,6 +24,7 @@ const Footer: React.FC<FooterProps> = ({ onSubscribe }) => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
+  const [showModal, setShowModal] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,8 +38,8 @@ const Footer: React.FC<FooterProps> = ({ onSubscribe }) => {
 
     try {
       // Aquí irá tu lógica de API
-      await onSubscribe?.(email);
-      setMessage('¡Gracias por unirte! Revisa tu correo.');
+      // await onSubscribe?.(email);
+      setShowModal(true);
       setEmail('');
     } catch (error) {
       setMessage('Error al suscribirse. Intenta de nuevo.');
@@ -37,6 +48,10 @@ const Footer: React.FC<FooterProps> = ({ onSubscribe }) => {
       setIsSubmitting(false);
       setTimeout(() => setMessage(''), 5000);
     }
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   const currentYear = new Date().getFullYear();
@@ -131,6 +146,52 @@ const Footer: React.FC<FooterProps> = ({ onSubscribe }) => {
             </a>
           </p>
         </div>
+        {/* Modal */}
+        {showModal && (
+          <div
+            className="animate-fade-in fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
+            onClick={closeModal}
+          >
+            <div
+              className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-3xl bg-white shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Modal Header */}
+              <div className="border-essence-rose-100 sticky top-0 z-10 rounded-t-3xl border-b bg-white p-6 sm:p-8">
+                <div className="flex justify-end">
+                  <button
+                    onClick={closeModal}
+                    className="bg-essence-rose-50 hover:bg-essence-rose-100 text-essence-mauve-600 hover:text-essence-mauve-700 ml-4 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full transition-colors hover:cursor-pointer"
+                    aria-label="Cerrar modal"
+                  >
+                    <X className="h-5 w-5" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Modal Content */}
+              <div className="p-6 sm:p-8">
+                <div className="text-center">
+                  <div className="bg-essence-success/20 mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full">
+                    <CheckCircle className="text-essence-success h-8 w-8" />
+                  </div>
+                  <h4 className="text-essence-mauve-700 font-fredoka mb-2 pb-6 text-2xl font-light">
+                    ¡Gracias por encender tu esencia con nosotros!
+                  </h4>
+                  <p className="text-essence-mauve-500 font-quicksand pb-6 font-light text-balance">
+                    Tu suscripción está confirmada. A partir de ahora, recibirás inspiración,
+                    rituales personalizados, novedades conscientes y mensajes que nutren el alma
+                    directamente en tu bandeja de entrada. Este es solo el comienzo de un viaje de
+                    bienestar, conexión y transformación.
+                  </p>
+                  <p className="text-essence-mauve-500 font-poiretone font-bold text-balance">
+                    Bienvenida a la comunidad de Essence Burn
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Main Footer Content */}

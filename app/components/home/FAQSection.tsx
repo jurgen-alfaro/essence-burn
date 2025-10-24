@@ -135,7 +135,6 @@ const FAQSection: React.FC<FAQSectionProps> = ({
 
   // Aplicar límite si existe
   const displayedFAQs = maxItems ? filteredFAQs.slice(0, maxItems) : filteredFAQs;
-  const hasMoreFAQs = maxItems && filteredFAQs.length > maxItems;
 
   return (
     <section

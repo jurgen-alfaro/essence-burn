@@ -10,7 +10,6 @@ import {
   AlertCircle,
   Mail,
   MessageCircle,
-  MailPlus,
 } from 'lucide-react';
 import FAQSection from '../components/home/FAQSection';
 import Link from 'next/link';
