@@ -165,8 +165,8 @@ const FAQSection: React.FC<FAQSectionProps> = ({
             {title}
           </h2>
 
-          <p className="font-quicksand text-essence-mauve-500 mx-auto max-w-2xl text-lg font-light sm:text-xl">
-            {subtitle}
+          <p className="font-quicksand text-essence-mauve-500 mx-auto max-w-2xl text-lg font-light sm:text-2xl">
+            {subtitle}💡
           </p>
 
           {/* Decorative divider */}

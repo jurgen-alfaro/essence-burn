@@ -113,13 +113,14 @@ const FAQPage: React.FC = () => {
         <div className="relative flex h-full items-center justify-center px-4">
           <div className="max-w-4xl text-center">
             <h1 className="font-fredoka mb-6 text-3xl leading-tight font-light tracking-wide text-white sm:mb-8 sm:text-4xl lg:text-5xl xl:text-6xl">
-              Preguntas Frecuentes
+              &ldquo;Respuestas con alma para tus dudas conscientes&rdquo;
             </h1>
-            <p className="font-quicksand mx-auto max-w-4xl text-base font-light text-balance text-white/90 sm:text-lg lg:text-xl">
+            <p className="font-quicksand mx-auto max-w-4xl text-justify text-base font-light text-white/90 sm:text-lg lg:text-2xl">
               Sabemos que cada camino hacia el bienestar es único, y que las preguntas son parte
               esencial del viaje. En este espacio sagrado de respuestas, encontrarás guía, claridad
               y tranquilidad. Hemos reunido las dudas más comunes que surgen al explorar el universo
-              de Essence Burn, para que tu experiencia sea tan fluida como tu ritual.
+              de <span className="italic">Essence Burn</span>, para que tu experiencia sea tan
+              fluida como tu ritual.
             </p>
 
             {/* Decorative divider */}

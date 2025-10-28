@@ -12,6 +12,7 @@ import {
   RefreshCw,
   Check,
   Send,
+  Earth,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -111,11 +112,13 @@ const ShippingPage: React.FC = () => {
         <div className="relative flex h-full items-center justify-center px-4">
           <div className="max-w-4xl text-center">
             <h1 className="font-fredoka mb-6 text-3xl leading-tight font-light tracking-wide text-white sm:mb-8 sm:text-4xl lg:text-5xl xl:text-6xl">
-              Envíos y Entregas
+              &ldquo;Cada ritual llega con intención, cuidado y respeto&rdquo;
             </h1>
-            <p className="font-quicksand mx-auto max-w-4xl text-base font-light text-balance text-white/90 sm:text-lg lg:text-xl">
-              En Essence Burn, creemos que el viaje de cada producto comienza mucho antes de llegar
-              a tus manos.
+            <p className="font-quicksand mx-auto max-w-4xl text-justify text-base font-light text-balance text-white/90 sm:text-lg lg:text-2xl">
+              Desde el momento en que preparamos tu pedido, lo hacemos con amor, atención al detalle
+              y compromiso con el planeta. Usamos empaques sostenibles y procesos conscientes para
+              que tu experiencia sea tan especial como el ritual que estás por recibir. Porque tu
+              bienestar merece llegar envuelto en propósito.
             </p>
 
             {/* Decorative divider */}
@@ -130,15 +133,16 @@ const ShippingPage: React.FC = () => {
 
       {/* Introduction */}
       <section className="to-essence-cream-50 bg-gradient-to-b from-white px-4 py-16 sm:py-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <h3 className="text-essence-mauve-600 font-fredoka text-xl leading-relaxed font-light sm:text-4xl">
-            Cada ritual llega con intención, cuidado y respeto.
+        <div className="mx-auto text-center">
+          <div className="bg-essence-cream mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full">
+            <Truck className="text-essence-rose h-8 w-8" />
+          </div>
+          <h3 className="text-essence-mauve-600 font-fredoka text-xl leading-relaxed font-light sm:text-4xl lg:text-5xl">
+            Envíos y Entregas
           </h3>
-          <p className="text-essence-mauve-500 font-quicksand mt-6 text-lg leading-relaxed font-light text-balance">
-            Desde el momento en que preparamos tu pedido, lo hacemos con amor, atención al detalle y
-            compromiso con el planeta. Usamos empaques sostenibles y procesos conscientes para que
-            tu experiencia sea tan especial como el ritual que estás por recibir. Porque tu
-            bienestar merece llegar envuelto en propósito.
+          <p className="text-essence-mauve-500 font-quicksand mt-6 text-2xl leading-relaxed font-light text-balance">
+            En <span className="italic">Essence Burn</span>, creemos que el viaje de cada producto
+            comienza mucho antes de llegar a tus manos.
           </p>
         </div>
       </section>
@@ -153,10 +157,10 @@ const ShippingPage: React.FC = () => {
       <section className="bg-essence-cream-50 px-4 py-12 sm:py-18 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
-            <h2 className="text-essence-mauve-700 font-fredoka mb-4 text-3xl font-light tracking-wide sm:text-4xl lg:text-5xl">
+            <h2 className="text-essence-mauve-600 font-fredoka mb-4 text-3xl font-light tracking-wide sm:text-4xl lg:text-5xl">
               ¿Cómo enviamos tu ritual?
             </h2>
-            <p className="text-essence-mauve-500 mx-auto max-w-2xl text-lg font-light">
+            <p className="text-essence-mauve-500 mx-auto max-w-2xl text-2xl font-light">
               Cada paso del proceso está diseñado con conciencia y amor
             </p>
           </div>
@@ -193,13 +197,13 @@ const ShippingPage: React.FC = () => {
           <div className="from-essence-peach-200 to-essence-cream-500 border-essence-rose-200/30 mt-16 rounded-3xl border bg-gradient-to-br p-8 sm:p-12">
             <div className="flex flex-col items-center gap-6 md:flex-row">
               <div className="bg-essence-peach/20 flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full">
-                <Leaf className="text-essence-peach h-10 w-10" />
+                <Earth className="text-essence-peach h-10 w-10" />
               </div>
               <div className="flex-1 text-center md:text-left">
                 <h3 className="text-essence-mauve-700 font-fredoka mb-3 text-2xl font-light tracking-wide">
                   Compromiso con el Planeta
                 </h3>
-                <p className="text-essence-mauve-600 font-quicksand leading-relaxed font-light">
+                <p className="text-essence-mauve-600 font-quicksand text-xl leading-relaxed font-light">
                   Todos nuestros empaques son biodegradables, reciclables o reutilizables. Usamos
                   papel kraft sin blanquear, cintas de algodón y relleno de papel reciclado. Porque
                   cuidarte y cuidar el planeta van de la mano.
@@ -234,7 +238,7 @@ const ShippingPage: React.FC = () => {
 
                 {/* Carriers */}
                 <div className="mb-6 space-y-4">
-                  <p className="text-essence-mauve-500 font-poiretone mb-3 text-sm font-semibold">
+                  <p className="text-essence-mauve-500 font-poiretone mb-3 text-base font-semibold">
                     Trabajamos con:
                   </p>
                   {carriers.map((carrier, index) => (
@@ -255,7 +259,7 @@ const ShippingPage: React.FC = () => {
                 <div className="border-essence-rose-200 border-t pt-6">
                   <p className="text-essence-mauve-500 font-quicksand text-sm font-light italic">
                     ¿Tu ubicación no aparece?{' '}
-                    <Link href="/contacto#contactForm" className="underline">
+                    <Link href="/contacto#form" className="underline">
                       Escríbenos
                     </Link>{' '}
                     para ver cómo podemos ayudarte.
@@ -300,8 +304,8 @@ const ShippingPage: React.FC = () => {
               </div>
 
               <div className="from-essence-peach-50 to-essence-rose-50 border-essence-peach-100 rounded-2xl border bg-gradient-to-br p-6">
-                <p className="text-essence-mauve-700 font-poiretone text-center font-semibold italic">
-                  Cada ritual llega en el momento justo
+                <p className="text-essence-mauve-700 font-quicksand text-center text-lg font-semibold italic">
+                  ¡Cada ritual llega en el momento justo!
                 </p>
               </div>
 
@@ -341,8 +345,8 @@ const ShippingPage: React.FC = () => {
             <h2 className="text-essence-mauve-700 font-fredoka mb-4 text-3xl font-light tracking-wide sm:text-4xl lg:text-5xl">
               Costos de Envío
             </h2>
-            <p className="text-essence-mauve-500 font-quicksand text-lg font-light">
-              Tarifas transparentes y justas para todo el país
+            <p className="text-essence-mauve-500 font-quicksand text-2xl font-light">
+              ¡Tarifas transparentes y justas para todo el país!
             </p>
           </div>
 
@@ -399,21 +403,21 @@ const ShippingPage: React.FC = () => {
               <RefreshCw className="text-essence-mauve h-7 w-7" />
             </div>
             <h2 className="text-essence-mauve-700 font-fredoka mb-4 text-3xl font-light tracking-wide sm:text-4xl lg:text-5xl">
-              Cambios y Devoluciones
+              Cambios & Devoluciones
             </h2>
-            <p className="text-essence-mauve-500 font-quicksand text-lg font-light italic">
-              Si algo no vibra contigo, estamos acá para ayudarte.
+            <p className="text-essence-mauve-500 font-quicksand text-2xl font-light">
+              ¡Si algo no vibra contigo, estamos acá para ayudarte!
             </p>
           </div>
           <div className="from-essence-peach-200 to-essence-cream-500 border-essence-rose-200/30 mx-auto mt-16 max-w-xl rounded-3xl border bg-gradient-to-br p-8 sm:p-12">
-            <p className="text-essence-mauve-500 font-quicksand text-center text-base">
-              Para conocer todos los detalles sobre nuestras políticas de devolución y garantía,
+            <p className="text-essence-mauve-500 font-quicksand text-center text-lg">
+              Para conocer todos los detalles sobre nuestra Política de Devolución y Garantía,
               visita nuestra{' '}
               <Link
                 href="/devoluciones"
                 className="text-essence-mauve-700 hover:text-essence-mauve-900 underline transition-colors"
               >
-                página de devoluciones
+                página de Devoluciones
               </Link>
               .
             </p>

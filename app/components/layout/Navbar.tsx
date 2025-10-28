@@ -67,8 +67,8 @@ const Navbar = () => {
                     <Image
                       src="/logo.webp"
                       alt="logo"
-                      width={156}
-                      height={156}
+                      width={100}
+                      height={100}
                       className="z-50 rounded-full"
                     />
                     {/* <span className="text-lg font-light tracking-wider text-essence-cream lg:text-xl">

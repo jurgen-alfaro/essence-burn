@@ -10,6 +10,7 @@ import {
   AlertCircle,
   Mail,
   MessageCircle,
+  PackageOpen,
 } from 'lucide-react';
 import FAQSection from '../components/home/FAQSection';
 import Link from 'next/link';
@@ -71,7 +72,7 @@ const ReturnsPage: React.FC = () => {
   ];
 
   const exceptions = [
-    'Productos de skin care abiertos o usados (por higiene)',
+    'Productos de skincare abiertos o usados (por higiene)',
     'Velas encendidas o con la mecha quemada',
     'Productos personalizados o hechos a pedido',
     'Artículos en oferta o liquidación (salvo defecto)',
@@ -99,10 +100,14 @@ const ReturnsPage: React.FC = () => {
         <div className="relative flex h-full items-center justify-center px-4">
           <div className="max-w-4xl text-center">
             <h1 className="font-fredoka mb-6 text-3xl leading-tight font-light tracking-wide text-white sm:mb-8 sm:text-4xl lg:text-5xl xl:text-6xl">
-              Devoluciones y Garantía
+              &ldquo;Si algo no vibra contigo, estamos acá para ayudarte&rdquo;
             </h1>
-            <p className="font-quicksand mx-auto max-w-4xl text-base font-light text-balance text-white/90 sm:text-lg lg:text-xl">
-              Si algo no vibra con vos, estamos acá para ayudarte.
+            <p className="font-quicksand mx-auto max-w-4xl text-justify text-base font-light text-white/90 sm:text-lg lg:text-2xl">
+              En <span className="italic">Essence Burn</span>, cada producto es creado con amor,
+              intención y respeto por tí y por el planeta. Sabemos que a veces las cosas no salen
+              como esperamos, por eso queremos que te sientas acompañada también en esos momentos.
+              Nuestra Política de Devoluciones y Garantía está pensada para ofrecerte tranquilidad,
+              claridad y cuidado.
             </p>
 
             {/* Decorative divider */}
@@ -116,16 +121,27 @@ const ReturnsPage: React.FC = () => {
       </section>
 
       {/* Introduction */}
-      <section className="to-essence-cream-50 bg-gradient-to-b from-white px-4 py-12 sm:py-18 lg:py-20">
+      <section className="to-essence-cream-50 bg-gradient-to-b from-white px-4 py-16 sm:py-20">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-essence-mauve-600 font-quicksand text-lg leading-relaxed font-light text-balance sm:text-xl">
-            En Essence Burn, cada producto es creado con amor, intención y respeto por vos y por el
-            planeta. Sabemos que a veces las cosas no salen como esperamos, por eso queremos que te
-            sientas acompañada también en esos momentos. Nuestra política de devoluciones y garantía
-            está pensada para ofrecerte tranquilidad, claridad y cuidado.
+          <div className="bg-essence-cream mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full">
+            <PackageOpen className="text-essence-rose h-8 w-8" />
+          </div>
+          <h3 className="text-essence-mauve-600 font-fredoka text-xl leading-relaxed font-light sm:text-4xl lg:text-5xl">
+            Devoluciones & Garantía
+          </h3>
+          <p className="text-essence-mauve-500 font-quicksand mt-6 text-2xl leading-relaxed font-light text-balance">
+            En <span className="italic">Essence Burn</span>, creemos que la confianza se construye
+            con cada detalle, incluso después de tu compra. Descubre cómo gestionamos devoluciones y
+            garantías con transparencia y cuidado.
           </p>
         </div>
       </section>
+      {/* Decorative divider */}
+      <div className="flex items-center justify-center gap-2" aria-hidden="true">
+        <div className="to-essence-mauve/60 h-px w-32 bg-gradient-to-r from-transparent" />
+        <div className="bg-essence-mauve h-2 w-2 rounded-full" />
+        <div className="to-essence-mauve/60 h-px w-32 bg-gradient-to-l from-transparent" />
+      </div>
 
       {/* Return Process */}
       <section className="bg-essence-cream-50 px-4 py-12 sm:py-18 lg:py-20">
@@ -134,10 +150,10 @@ const ReturnsPage: React.FC = () => {
             <div className="bg-essence-peach/10 mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full">
               <RefreshCw className="text-essence-peach h-7 w-7" />
             </div>
-            <h2 className="text-essence-mauve-700 font-fredoka mb-4 text-3xl font-light tracking-wide sm:text-4xl lg:text-5xl">
+            <h2 className="text-essence-mauve-700 font-fredoka mb-5 text-3xl font-light tracking-wide sm:text-4xl lg:text-5xl">
               ¿Querés devolver tu ritual?
             </h2>
-            <p className="text-essence-mauve-500 font-quicksand mx-auto max-w-3xl text-lg font-light text-balance">
+            <p className="text-essence-mauve-500 font-quicksand mx-auto max-w-xl text-2xl leading-relaxed font-light text-balance lg:max-w-5xl">
               Si tu pedido no fue lo que esperabas, puedes solicitar una devolución dentro de los{' '}
               <strong className="text-essence-peach">7 días hábiles</strong> posteriores a
               recibirlo, siempre que el producto esté sin uso, en su empaque original y en perfectas
@@ -152,21 +168,21 @@ const ReturnsPage: React.FC = () => {
               return (
                 <div
                   key={index}
-                  className="border-essence-rose-100 relative rounded-3xl border bg-white p-8 shadow-sm transition-all duration-500 hover:shadow-xl"
+                  className="border-essence-rose-100 group hover:bg-essence-peach relative rounded-3xl border bg-white p-8 shadow-sm transition-all duration-500 hover:shadow-xl"
                 >
                   {/* Step number */}
                   <div className="from-essence-peach to-essence-rose font-poiretone absolute -top-4 -left-4 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br text-xl font-light text-white shadow-lg">
                     {step.number}
                   </div>
 
-                  <div className="bg-essence-peach/10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full">
+                  <div className="bg-essence-peach/10 group-hover:bg-essence-cream mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full transition-colors">
                     <Icon className="text-essence-peach h-8 w-8" />
                   </div>
 
                   <h3 className="text-essence-mauve-700 font-fredoka mb-3 text-center text-xl font-light tracking-wide">
                     {step.title}
                   </h3>
-                  <p className="text-essence-mauve-600 font-quicksand text-center text-sm leading-relaxed font-light">
+                  <p className="text-essence-mauve-600 font-quicksand text-center text-base leading-relaxed font-light">
                     {step.description}
                   </p>
                 </div>
@@ -191,7 +207,7 @@ const ReturnsPage: React.FC = () => {
                     <div className="bg-essence-success/20 mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full">
                       <CheckCircle className="text-essence-success h-3 w-3" />
                     </div>
-                    <span className="text-essence-mauve-600 text-sm font-light">{condition}</span>
+                    <span className="text-essence-mauve-600 text-base font-light">{condition}</span>
                   </li>
                 ))}
               </ul>
@@ -212,7 +228,7 @@ const ReturnsPage: React.FC = () => {
                     <div className="bg-essence-error/20 mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full">
                       <AlertCircle className="text-essence-error h-3 w-3" />
                     </div>
-                    <span className="text-essence-mauve-600 text-sm font-light">{exception}</span>
+                    <span className="text-essence-mauve-600 text-base font-light">{exception}</span>
                   </li>
                 ))}
               </ul>
@@ -241,11 +257,11 @@ const ReturnsPage: React.FC = () => {
             <h2 className="text-essence-mauve-700 font-fredoka mb-4 text-3xl font-light tracking-wide sm:text-4xl lg:text-5xl">
               Garantía de nuestros productos
             </h2>
-            <p className="text-essence-mauve-500 font-quicksand mx-auto max-w-3xl text-lg font-light text-balance">
+            <p className="text-essence-mauve-500 font-quicksand mx-auto max-w-3xl text-2xl leading-relaxed font-light text-balance">
               Todos nuestros productos están respaldados por una garantía de calidad. Si recibes un
               artículo dañado, defectuoso o incorrecto, por favor comunicate con nosotros dentro de
               los <strong className="text-essence-peach-500">3 días hábiles</strong> posteriores a
-              la entrega
+              la entrega.
             </p>
           </div>
 
@@ -261,7 +277,7 @@ const ReturnsPage: React.FC = () => {
                   <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-sm">
                     <Icon className="text-essence-peach h-7 w-7" />
                   </div>
-                  <h3 className="text-essence-mauve-700 font-fredoka mb-3 text-xl font-light tracking-wide">
+                  <h3 className="text-essence-mauve-700 font-fredoka mb-3 text-xl font-semibold tracking-wide">
                     {point.title}
                   </h3>
                   <p className="text-essence-mauve-600 font-quicksand leading-relaxed font-light">
@@ -361,7 +377,7 @@ const ReturnsPage: React.FC = () => {
           <h2 className="font-fredoka mb-4 text-3xl font-light tracking-wide text-white sm:text-4xl">
             ¿Tienes dudas?
           </h2>
-          <p className="font-quicksand fontsemi mx-auto mb-8 max-w-2xl text-lg text-balance text-white/80">
+          <p className="font-quicksand fontsemi mx-auto mb-8 max-w-2xl text-2xl leading-relaxed text-balance text-white/80">
             Estamos aquí para ayudarte con cualquier consulta sobre devoluciones, cambios o garantía
           </p>
 

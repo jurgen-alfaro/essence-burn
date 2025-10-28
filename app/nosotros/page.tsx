@@ -69,10 +69,15 @@ const AboutPage: React.FC = () => {
         <div className="relative flex h-full items-center justify-center px-4">
           <div className="max-w-4xl text-center">
             <h1 className="font-fredoka mb-6 text-3xl leading-tight font-light tracking-wide text-white sm:mb-8 sm:text-4xl lg:text-5xl xl:text-6xl">
-              La llama que transforma. La esencia que permanece.
+              &ldquo;La llama que transforma. La esencia que permanece&rdquo;
             </h1>
-            <p className="font-quicksand mx-auto max-w-4xl text-base font-light text-balance text-white/90 sm:text-lg lg:text-xl">
-              Transformamos momentos cotidianos en rituales sagrados de autocuidado
+            <p className="font-quicksand mx-auto max-w-4xl text-justify text-base font-light text-white/90 sm:text-lg lg:text-2xl">
+              <span className="italic">Essence Burn</span> es el reflejo de un viaje interior, de
+              una historia tejida con amor, creatividad y propósito. Cada producto nace del deseo
+              profundo de convertir lo cotidiano en ritual, de honrar el cuerpo, el alma y el
+              planeta. Aquí, el fuego no destruye: purifica, renueva, revela. Somos una marca que
+              cree en el poder del cuidado consciente, en la belleza que respeta la vida, y en la
+              magia de encender una vela para volver a tí.
             </p>
 
             {/* Decorative divider */}
@@ -87,17 +92,17 @@ const AboutPage: React.FC = () => {
 
       <section className="py-12">
         <div className="mx-auto max-w-7xl px-4">
-          <h2 className="text-essence-mauve-700 font-fredoka mb-6 text-center text-3xl font-light tracking-wide sm:text-2xl lg:text-4xl">
+          <h2 className="text-essence-mauve-700 font-fredoka mb-6 text-center text-3xl font-light tracking-wide sm:text-2xl lg:text-5xl">
             Essence Burn
           </h2>
-          <p className="text-essence-mauve-600 font-poiretone mx-auto max-w-2xl text-center text-lg leading-relaxed font-semibold text-balance sm:text-xl">
-            ✨ “Tu rutina es tu ritual. Tu esencia merece arder con propósito.” ✨
+          <p className="text-essence-mauve-600 font-poiretone mx-auto max-w-3xl text-center text-xl leading-relaxed font-semibold text-balance sm:text-2xl">
+            ✨ &ldquo;Tu rutina es tu ritual. Tu esencia merece arder con propósito&rdquo; ✨
           </p>
         </div>
       </section>
 
       {/* Nuestra Esencia - Image Left, Text Right */}
-      <section className="pb-20 pt-12 lg:pb-32 lg:pt-16">
+      <section className="pt-12 pb-20 lg:pt-16 lg:pb-32">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
             {/* Image */}
@@ -117,16 +122,16 @@ const AboutPage: React.FC = () => {
                 <Sparkles className="text-essence-rose h-7 w-7" />
               </div>
 
-              <h2 className="text-essence-mauve-700 font-fredoka mb-6 text-4xl font-light tracking-wide sm:text-5xl lg:text-6xl">
+              <h2 className="text-essence-mauve-700 font-fredoka mb-6 text-4xl font-light tracking-wide uppercase sm:text-5xl lg:text-6xl">
                 Nuestra Esencia
               </h2>
 
-              <div className="text-essence-mauve-600 font-quicksand mx-auto max-w-2xl text-lg leading-relaxed font-light text-balance sm:text-xl">
+              <div className="text-essence-mauve-600 font-quicksand mx-auto max-w-2xl text-justify text-lg leading-relaxed font-light sm:text-xl">
                 <p>
-                  Essence Burn nace del fuego interior que transforma. Inspirada en la creatividad
-                  de mi abuela, una mujer resiliente y emprendedora, y en mi propia búsqueda de
-                  bienestar, esta marca representa más que productos: es un espacio sagrado para
-                  reconectar contigo misma.
+                  <span className="italic">Essence Burn</span> nace del fuego interior que
+                  transforma. Inspirada en la creatividad de mi abuela, una mujer resiliente y
+                  emprendedora, y en mi propia búsqueda de bienestar, esta marca representa más que
+                  productos: es un espacio sagrado para reconectar contigo misma.
                 </p>
 
                 <p>
@@ -160,36 +165,37 @@ const AboutPage: React.FC = () => {
                 </div>
               </div>
 
-              <h2 className="text-essence-mauve-700 font-fredoka mb-6 text-left text-3xl font-light tracking-wide sm:text-4xl lg:text-5xl">
+              <h2 className="text-essence-mauve-700 font-fredoka mb-6 text-center text-3xl font-light tracking-wide uppercase sm:text-5xl lg:text-6xl">
                 ¿Por qué Essence Burn?
               </h2>
 
-              <div className="font-quicksand text-essence-mauve-600 space-y-4 text-lg leading-relaxed font-light text-balance">
+              <div className="font-quicksand text-essence-mauve-700 space-y-4 text-justify text-lg leading-relaxed font-light sm:text-xl">
                 <p>
                   El fuego transforma. Quema lo viejo, lo que ya no sirve, lo que duele. Y en ese
                   proceso, revela nuestra esencia más pura.
                 </p>
                 <p>
-                  Essence Burn simboliza ese viaje de evolución personal, donde cada llama encendida
-                  es una invitación a renacer, a reconectar con tu alma y a honrar tu autenticidad.
+                  <span className="italic">Essence Burn</span> simboliza ese viaje de evolución
+                  personal, donde cada llama encendida es una invitación a renacer, a reconectar con
+                  tu alma y a honrar tu autenticidad.
                 </p>
               </div>
 
               {/* Stats */}
               <div className="font-poiretone mt-10 flex items-center justify-around gap-6">
                 <div className="text-center">
-                  <p className="text-essence-peach-500 mb-1 text-3xl font-light">100%</p>
-                  <p className="text-essence-mauve-500 font-light">Natural</p>
+                  <p className="text-essence-peach-500 mb-1 text-3xl font-semibold">100%</p>
+                  <p className="text-essence-mauve-500 font-semibold">Natural</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-essence-peach-500 mb-1 text-3xl font-light">0</p>
-                  <p className="text-essence-mauve-500 font-light">Toxinas</p>
+                  <p className="text-essence-peach-500 mb-1 text-3xl font-semibold">0</p>
+                  <p className="text-essence-mauve-500 font-semibold">Toxinas</p>
                 </div>
                 <div className="items-center- flex flex-col justify-center">
-                  <p className="text-essence-peach-500 mb-1 flex items-center justify-center text-3xl font-light">
+                  <p className="text-essence-peach-500 mb-1 flex items-center justify-center text-3xl font-semibold">
                     <InfinityIcon className="h-8 w-8" />
                   </p>
-                  <p className="text-essence-mauve-500 font-light">Amor</p>
+                  <p className="text-essence-mauve-500 font-semibold">Amor</p>
                 </div>
               </div>
               {/* Decorative element */}
@@ -218,19 +224,19 @@ const AboutPage: React.FC = () => {
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
             {/* Misión */}
-            <div className="from-essence-rose-50 to-essence-cream-50 border-essence-rose-100 rounded-3xl border bg-gradient-to-br p-8 sm:p-12">
+            <div className="from-essence-rose-50 to-essence-cream-50 border-essence-rose-100 rounded-3xl border bg-gradient-to-br p-8 text-center sm:p-12">
               <div className="bg-essence-peach/20 mb-6 inline-flex h-14 w-14 items-center justify-center rounded-full">
                 <Target className="text-essence-peach h-7 w-7" />
               </div>
 
-              <h3 className="text-essence-mauve-700 font-fredoka mb-6 text-2xl font-light tracking-wide sm:text-3xl">
-                Nuestra Misión
+              <h3 className="text-essence-mauve-700 font-fredoka mb-6 text-2xl font-light tracking-wide uppercase sm:text-4xl">
+                Misión
               </h3>
 
-              <p className="text-essence-mauve-600 font-quicksand text-lg leading-relaxed font-light text-balance">
-                Crear productos conscientes que acompañen los rituales personales de bienestar,
-                belleza y conexión espiritual, respetando profundamente la vida animal y el medio
-                ambiente.
+              <p className="text-essence-mauve-700 font-quicksand text-lg leading-relaxed font-light text-balance sm:text-xl">
+                &ldquo;Crear productos conscientes que acompañen los rituales personales de
+                bienestar, belleza y conexión espiritual, respetando profundamente la vida animal y
+                el medio ambiente&rdquo;
               </p>
 
               {/* Decorative element */}
@@ -242,19 +248,19 @@ const AboutPage: React.FC = () => {
             </div>
 
             {/* Visión */}
-            <div className="from-essence-peach-200 to-essence-cream-500 border-essence-peach-100 rounded-3xl border bg-gradient-to-br p-8 sm:p-12">
+            <div className="from-essence-peach-200 to-essence-cream-500 border-essence-peach-100 rounded-3xl border bg-gradient-to-br p-8 text-center sm:p-12">
               <div className="bg-essence-mauve-500 mb-6 inline-flex h-14 w-14 items-center justify-center rounded-full">
                 <Eye className="text-essence-cream-500 h-7 w-7" />
               </div>
 
-              <h3 className="text-essence-mauve-700 font-fredoka mb-6 text-2xl font-light tracking-wide sm:text-3xl">
-                Nuestra Visión
+              <h3 className="text-essence-mauve-700 font-fredoka mb-6 text-2xl font-light tracking-wide uppercase sm:text-4xl">
+                Visión
               </h3>
 
-              <p className="text-essence-mauve-600 font-quicksand text-lg leading-relaxed font-light">
-                Ser una marca que inspire a las personas a vivir con intención, cuidarse con amor y
-                transformar su rutina diaria en un espacio sagrado, mientras construimos una
-                comunidad comprometida con el respeto por todos los seres vivos y el planeta.
+              <p className="text-essence-mauve-700 font-quicksand text-lg leading-relaxed font-light sm:text-xl">
+                &ldquo;Ser una marca que inspire a las personas a vivir con intención, cuidarse con
+                amor y transformar su rutina diaria en un espacio sagrado, mientras construimos una
+                comunidad comprometida con el respeto por todos los seres vivos y el planeta&rdquo;
               </p>
 
               {/* Decorative element */}
@@ -287,15 +293,15 @@ const AboutPage: React.FC = () => {
         {/* Content */}
         <div className="relative flex h-full items-center justify-center px-4">
           <div className="max-w-4xl text-center">
-            <h1 className="font-fredoka mb-6 text-3xl leading-tight font-light tracking-wide text-white sm:mb-8 sm:text-4xl lg:text-5xl xl:text-6xl">
+            <h1 className="font-fredoka mb-6 text-3xl leading-tight font-light tracking-wide text-white uppercase sm:mb-8 sm:text-5xl lg:text-6xl">
               Filosofía
             </h1>
-            <p className="font-quicksand mx-auto max-w-4xl text-base font-light text-balance text-white/90 sm:text-lg lg:text-xl">
-              Creemos que el bienestar integral comienza en los pequeños actos. Que el cuidado
-              personal es un ritual, no una rutina. Que la belleza está en la autenticidad. Que el
-              respeto por la vida animal y el medio ambiente es parte de nuestro compromiso
+            <p className="font-quicksand m:text-lg mx-auto max-w-4xl text-justify text-base font-light text-white/90 lg:text-3xl">
+              &ldquo;Creemos que el bienestar integral comienza en los pequeños actos. Que el
+              cuidado personal es un ritual, no una rutina. Que la belleza está en la autenticidad.
+              Que el respeto por la vida animal y el medio ambiente es parte de nuestro compromiso
               espiritual. Y que cada producto debe reflejar esa armonía entre lo que somos, lo que
-              sentimos y lo que elegimos.
+              sentimos y lo que elegimos&rdquo;
             </p>
 
             {/* Decorative divider */}
@@ -310,13 +316,13 @@ const AboutPage: React.FC = () => {
 
       {/* Nuestros Valores */}
       <section className="bg-essence-cream-50 py-20 lg:py-32">
-        <div className="mx-auto max-w-7xl px-4">
+        <div className="max-w-8xl mx-auto px-4">
           <div className="mb-16 text-center">
-            <h2 className="text-essence-mauve-700 font-fredoka mb-4 text-3xl font-light tracking-wide sm:text-4xl lg:text-5xl">
+            <h2 className="text-essence-mauve-700 font-fredoka mb-4 text-3xl font-light tracking-wide uppercase sm:text-5xl lg:text-6xl">
               Nuestros Valores
             </h2>
-            <p className="text-essence-mauve-500 font-quicksand mx-auto max-w-2xl text-lg font-light">
-              Los principios que guían cada decisión, cada producto y cada interacción
+            <p className="text-essence-mauve-500 font-quicksand mx-auto max-w-2xl text-lg font-light sm:text-2xl">
+              Los principios que guían cada decisión, cada producto y cada interacción ✨
             </p>
           </div>
 
@@ -326,15 +332,15 @@ const AboutPage: React.FC = () => {
               return (
                 <div
                   key={index}
-                  className="group justify-s flex flex-col items-center rounded-xl p-8 transition-all duration-500 hover:shadow-xl"
+                  className="group flex flex-col items-center rounded-xl p-8 transition-all duration-500 hover:shadow-xl"
                 >
-                  <div className="bg-essence-peach/10 group-hover:bg-essence-peach/20 flex h-14 w-14 items-center justify-center rounded-full transition-colors">
-                    <Icon className="text-essence-peach h-7 w-7" />
+                  <div className="bg-essence-peach/10 group-hover:bg-essence-peach/20 flex h-20 w-20 items-center justify-center rounded-full transition-colors">
+                    <Icon className="text-essence-peach h-13 w-13" />
                   </div>
-                  <h3 className="text-essence-mauve-700 font-poiretone text-xl font-semibold tracking-wide">
+                  <h3 className="text-essence-mauve-700 font-poiretone mt-4 text-3xl font-semibold tracking-wide">
                     {value.title}
                   </h3>
-                  <p className="text-essence-mauve-600 font-quicksand text-center text-sm leading-relaxed font-light">
+                  <p className="text-essence-mauve-600 font-quicksand text-center text-lg leading-relaxed font-light">
                     {value.description}
                   </p>
                 </div>
@@ -346,7 +352,7 @@ const AboutPage: React.FC = () => {
 
       {/* Decorative quote */}
       <section className="bg-essence-cream-500 py-10 lg:py-14">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
           {/* Top dots decoration */}
           <div className="mb-12 flex items-center justify-center sm:mb-10" aria-hidden="true">
             <div className="via-essence-rose/40 h-px max-w-xs flex-grow bg-gradient-to-r from-transparent to-transparent sm:max-w-md" />
@@ -355,14 +361,22 @@ const AboutPage: React.FC = () => {
             </div>
             <div className="via-essence-rose/40 h-px max-w-xs flex-grow bg-gradient-to-l from-transparent to-transparent sm:max-w-md" />
           </div>
+          <div className="mb-5 flex w-full justify-center">
+            <div className="bg-essence-peach-300/50 flex h-14 w-14 items-center justify-center rounded-full transition-colors sm:h-20 sm:w-20">
+              <Flame className="text-essence-mauve-500 h-10 w-10 sm:h-13 sm:w-13" />
+            </div>
+          </div>
+
           <blockquote className="relative">
             <div
               className="text-essence-peach/20 absolute -top-6 left-1/2 -translate-x-1/2 text-6xl"
               aria-hidden="true"
             ></div>
-            <p className="text-essence-mauve-600 font-quicksand text-xl leading-relaxed font-light italic sm:text-2xl">
-              No vendemos productos. <br />
-              Creamos rituales
+            <p className="text-essence-mauve-600 font-petit text-xl leading-relaxed font-light italic sm:text-6xl">
+              &ldquo;No vendemos productos
+            </p>
+            <p className="text-essence-mauve-600 font-fredoka text-xl leading-relaxed font-light italic sm:-mt-5 sm:text-6xl">
+              Creamos rituales&rdquo;
             </p>
           </blockquote>
           {/* Bottom dots decoration */}
@@ -381,23 +395,17 @@ const AboutPage: React.FC = () => {
       {/* Manifiesto - Pergamino Style */}
       <section className="bg-essence-cream relative overflow-hidden px-4 py-20 lg:py-32">
         {/* Background texture */}
-        {/* <div
+        <div
           className="absolute inset-0 opacity-5"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23b68187' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }}
           aria-hidden="true"
-        /> */}
+        />
 
-        <div className="relative mx-auto max-w-4xl">
+        <div className="from-essence-rose-50 to-essence-cream-50 relative mx-auto max-w-4xl bg-gradient-to-br">
           {/* Pergamino Container */}
-          <div
-            className="relative rounded-3xl bg-gradient-to-br from-[#f5e6d3] via-[#f9f3e8] to-[#f5e6d3] p-8 shadow-2xl sm:p-12 lg:p-16"
-            style={{
-              boxShadow:
-                '0 20px 60px rgba(182, 129, 135, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.5)',
-            }}
-          >
+          <div className="relative rounded-3xl p-8 shadow-2xl sm:p-12 lg:p-16">
             {/* Decorative corners */}
             <div
               className="border-essence-mauve/20 absolute top-4 left-4 h-12 w-12 rounded-tl-lg border-t-2 border-l-2"
@@ -418,7 +426,7 @@ const AboutPage: React.FC = () => {
 
             {/* Content */}
             <div className="mb-10 text-center">
-              <h2 className="text-essence-mauve-800 font-fredoka mb-4 text-3xl font-light tracking-wide sm:text-4xl lg:text-5xl">
+              <h2 className="text-essence-mauve-800 font-fredoka mb-4 text-3xl font-light tracking-wide uppercase sm:text-4xl lg:text-6xl">
                 Nuestro Manifiesto
               </h2>
               <div className="flex items-center justify-center gap-2" aria-hidden="true">
@@ -428,42 +436,33 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="text-essence-mauve-700 font-poiretone space-y-6">
-              <p className="text-base leading-relaxed font-light italic sm:text-xl">
-                Creemos en el poder del fuego como símbolo de transformación.
-              </p>
+            <div className="text-essence-mauve-700 font-poiretone space-y-6 text-2xl font-semibold">
+              <p className="">Creemos en el poder del fuego como símbolo de transformación.</p>
 
-              <p className="text-base leading-loose font-light sm:text-lg">
-                Creemos que cada rutina puede convertirse en un ritual sagrado.
-              </p>
+              <p className="">Creemos que cada rutina puede convertirse en un ritual sagrado.</p>
 
-              <p className="text-base leading-loose font-light sm:text-lg">
+              <p className="">
                 Creemos que el respeto por la vida animal y el planeta es parte de nuestro
                 propósito.
               </p>
 
-              <p className="text-base leading-loose font-light sm:text-lg">
+              <p className="">
                 Creemos que la belleza comienza en el alma y se refleja en cada gesto de amor
                 propio.
               </p>
 
-              <p className="text-base leading-loose font-light sm:text-lg">
+              <p className="">
                 Creemos que emprender es un acto de valentía, y que cada vela encendida es una luz
                 que guía el camino hacia nuestra mejor versión.
               </p>
 
-              <p className="mt-8 text-lg leading-relaxed font-light italic sm:text-xl">
-                Creemos en ti, en tu esencia, en tu fuego interior.
-              </p>
+              <p className="">Creemos en ti, en tu esencia, en tu fuego interior.</p>
             </div>
 
             {/* Signature */}
             <div className="mt-12 text-center">
               <div className="inline-block">
-                <p
-                  className="text-essence-mauve-700 mb-2 text-2xl font-light sm:text-3xl"
-                  style={{ fontFamily: 'Brush Script MT, cursive' }}
-                >
+                <p className="text-essence-mauve-700 font-petit mb-2 text-2xl font-semibold sm:text-[1.4rem]">
                   Somos Essence Burn. Somos ritual. Somos alma. Somos cambio
                 </p>
                 <div className="bg-essence-mauve/30 w mx-auto h-px w-full" />

@@ -51,6 +51,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onSubmit }) => {
   const subjects = [
     { value: '', label: 'Selecciona un motivo' },
     { value: 'productos', label: 'Consulta sobre productos' },
+    { value: 'garantia', label: 'Consulta sobre garantía' },
     { value: 'pedido', label: 'Estado de mi pedido' },
     { value: 'rituales', label: 'Rituales personalizados' },
     { value: 'certificados', label: 'Certificados de regalo' },
@@ -157,13 +158,13 @@ const ContactPage: React.FC<ContactPageProps> = ({ onSubmit }) => {
         <div className="relative flex h-full items-center justify-center px-4">
           <div className="max-w-4xl text-center">
             <h1 className="font-fredoka mb-6 text-3xl leading-tight font-light tracking-wide text-white sm:mb-8 sm:text-4xl lg:text-5xl xl:text-6xl">
-              Conecta con nuestra esencia, comparte la tuya.
+              &ldquo;Conecta con nuestra esencia, comparte la tuya&rdquo;
             </h1>
-            <p className="font-quicksand mx-auto max-w-4xl text-base font-light text-balance text-white/90 sm:text-lg lg:text-xl">
-              Queremos escucharte. Este espacio es para que nos cuentes tus dudas, ideas,
-              colaboraciones o simplemente para que nos digas hola. En Essence Burn creemos en el
-              poder de la conexión auténtica, así que si sientes que tu energía vibra con la
-              nuestra, escribenos.
+            <p className="font-quicksand mx-auto max-w-4xl text-justify text-base font-light text-white/90 sm:text-lg lg:text-2xl">
+              ¡Queremos escucharte! Este espacio es para que nos cuentes tus dudas, ideas,
+              colaboraciones o simplemente para que nos digas hola. En{' '}
+              <span className="italic">Essence Burn</span> creemos en el poder de la conexión
+              auténtica, así que si sientes que tu energía vibra con la nuestra, escríbenos.
             </p>
 
             {/* Decorative divider */}
@@ -527,7 +528,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onSubmit }) => {
             </div>
 
             {/* Business Hours */}
-            <div className="from-essence-peach/5 to-essence-rose/5 border-essence-rose-100 rounded-3xl border bg-gradient-to-br p-6 sm:p-8">
+            <div className="border-essence-rose-100 rounded-3xl border bg-white p-6 shadow-xl sm:p-8">
               <div className="mb-4 flex items-center gap-3">
                 <div className="bg-essence-peach/10 flex h-10 w-10 items-center justify-center rounded-full">
                   <Clock className="text-essence-peach h-5 w-5" />
@@ -599,17 +600,17 @@ const ContactPage: React.FC<ContactPageProps> = ({ onSubmit }) => {
       </section>
 
       {/* Collaborations Section */}
-      <section className="from-essence-mauve-800 to-essence-mauve-900 bg-gradient-to-br px-4 py-16 sm:py-20">
+      <section className="bg-essence-cream-700 px-4 py-16 sm:py-20">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
             <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/10">
               <Briefcase className="h-7 w-7 text-white" />
             </div>
-            <h2 className="font-fredoka mb-4 text-3xl font-light tracking-wide text-white sm:text-4xl">
-              Colaboraciones y Negocios
+            <h2 className="font-fredoka mb-4 text-3xl font-semibold tracking-wide text-white uppercase sm:text-4xl">
+              Colaboraciones & Negocios
             </h2>
-            <p className="font-quicksand mx-auto max-w-2xl text-lg font-light text-white/80">
-              ¿Eres empresa, marca o creador de contenido? Trabajemos juntos
+            <p className="font-quicksand mx-auto max-w-2xl text-xl font-light text-white/80">
+              ¿Eres empresa, marca o creador de contenido? ¡Trabajemos juntos! 🤝
             </p>
           </div>
 
@@ -642,11 +643,11 @@ const ContactPage: React.FC<ContactPageProps> = ({ onSubmit }) => {
                   key={index}
                   className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/10"
                 >
-                  <div className="bg-essence-peach/20 mb-4 flex h-12 w-12 items-center justify-center rounded-full">
-                    <Icon className="text-essence-peach h-6 w-6" />
+                  <div className="bg-essence-peach mb-4 flex h-12 w-12 items-center justify-center rounded-full">
+                    <Icon className="text-essence-peach-600 h-6 w-6" />
                   </div>
-                  <h3 className="mb-2 text-lg font-light text-white">{item.title}</h3>
-                  <p className="text-sm font-light text-white/70">{item.description}</p>
+                  <h3 className="mb-2 text-lg font-semibold text-white">{item.title}</h3>
+                  <p className="text-base font-light text-white/70">{item.description}</p>
                 </div>
               );
             })}

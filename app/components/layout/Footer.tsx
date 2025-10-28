@@ -275,7 +275,7 @@ const Footer: React.FC<FooterProps> = ({ onSubscribe }) => {
               <ul className="font-poiretone space-y-3 tracking-wider">
                 {[
                   { label: 'Preguntas Frecuentes', href: '/faq' },
-                  { label: 'Envíos y Entregas', href: '/envios' },
+                  { label: 'Envíos & Entregas', href: '/envios' },
                   { label: 'Devoluciones', href: '/devoluciones' },
                   { label: 'Certificados de Regalo', href: '/guia' },
                   { label: 'Guía de Reciclaje', href: '/reciclaje' },
